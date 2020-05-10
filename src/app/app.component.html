@@ -20,6 +20,15 @@
       <div class="field">
         <div class="control">
           <label class="checkbox">
+            <input (change)="onChangeUseCapitalLetters()" type="checkbox" />
+            Use Capitalized Letters as well
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
             <input (change)="onChangeUseNumbers()" type="checkbox" />
             Use Numbers
           </label>

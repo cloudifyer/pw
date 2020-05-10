@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   length = 0;
   includeLetters = false;
+  includeCapslock = false;
   includeNumbers = false;
   includeSymbols = false;
   password = '';
@@ -18,34 +19,38 @@ export class AppComponent {
     if(!isNaN(parsedValue)) {
       this.length = parsedValue;
     }
-
-    console.log(this.length);
   }
 
   onChangeUseLetters() {
     this.includeLetters = !this.includeLetters; 
-    console.log(this.includeLetters);
+  }
+
+  onChangeUseCapitalLetters() {
+    this.includeCapslock = !this.includeCapslock;
   }
 
   onChangeUseNumbers() {
     this.includeNumbers = !this.includeNumbers;  
-    console.log(this.includeNumbers);
   }
 
   onChangeUseSymbols() {
-    this.includeSymbols = !this.includeSymbols;  
-    console.log(this.includeSymbols);
+    this.includeSymbols = !this.includeSymbols;
   }
 
   onButtonClick() {
     const numbers = '1234567890';
     const letters = 'abcdefghijklmnopqrstuvwxyz';
+    const capsLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const symbols = '!@#$%^&*()';
 
     let validChars = '';
 
     if(this.includeLetters) {
       validChars += letters;
+    }
+    
+    if(this.includeCapslock) {
+      validChars += capsLetters;
     }
 
     if(this.includeNumbers) {
