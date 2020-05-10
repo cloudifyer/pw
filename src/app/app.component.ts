@@ -41,7 +41,7 @@ export class AppComponent {
     const numbers = '1234567890';
     const letters = 'abcdefghijklmnopqrstuvwxyz';
     const capsLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const symbols = '!@#$%^&*()';
+    const symbols = '~!@#$%^&*()_+';
 
     let validChars = '';
 
